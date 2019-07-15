@@ -35,6 +35,8 @@ const students = [
 const studentsGender = _.countBy(students, "gender");
 console.log("Count by gender:");
 console.log(studentsGender);
+console.log("Male: " + studentsGender.male);
+console.log("Female: " + studentsGender.female);
 
 const studentsName = _.map(students, "name");
 console.log("Students names:");
