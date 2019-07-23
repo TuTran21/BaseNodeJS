@@ -22,10 +22,10 @@ const _ = require("lodash");
 const formatDistance = require("date-fns/formatDistance");
 const format = require("date-fns/format");
 const fs = require("fs");
-const numberFormat = require("./functions/numberFormat/numberFormat");
+const numberFormat = require("../../functions/numberFormat/numberFormat");
 const XLSX = require("xlsx");
 //
-const readFile = fs.readFile("./products.json", "utf8", function read(
+const readFile = fs.readFile("../../products.json", "utf8", function read(
   err,
   data
 ) {
@@ -128,7 +128,7 @@ function convertJSONToXLSX(products) {
   // convert to Microsoft EXCEL workbook and write to a Buffer object
   const buf = XLSX.write(wb, { type: "buffer", bookType: "xlsx" });
 
-  fs.writeFile("./assignments/week2/products.xlsx", buf, err => {
+  fs.writeFile("./products.xlsx", buf, err => {
     if (err) {
       console.error("Write xlsx failed: ", err);
       return;

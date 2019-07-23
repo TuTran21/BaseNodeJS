@@ -10,3 +10,11 @@ module.exports = {
     console.log("abc");
   }
 };
+// Ex2:
+const check = function() {
+  console.log("Doing some work...");
+};
+module.exports = check;
+
+// npm website: 
+// https://www.npmjs.com
